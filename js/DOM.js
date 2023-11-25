@@ -7,6 +7,10 @@ const domUpdates = {
     players.push(this.getPlayerOne());
     players.push(this.getPlayerTwo());
     players.push(this.getPlayerThree());
+    players.push(this.getPlayerFour());
+    players.push(this.getPlayerFive());
+    players.push(this.getPlayerSix());
+    players.push(this.getPlayerSeven());
     return players;
   },
 
@@ -40,10 +44,54 @@ const domUpdates = {
     return playerThree;
   },
 
+    getPlayerFour() {
+    if ($('.player4-name').val()) {
+      var playerFour = new Player($('.player4-name').val());
+      $('.player4-ba').text(`${$('.player4-name').val()}: $`);
+    } else {
+      var playerFour = new Player('Player 4');
+    }
+    return playerFour;
+  },
+
+    getPlayerFive() {
+    if ($('.player5-name').val()) {
+      var playerFive = new Player($('.player5-name').val());
+      $('.player5-ba').text(`${$('.player5-name').val()}: $`);
+    } else {
+      var playerFive = new Player('Player 5');
+    }
+    return playerFive;
+  },
+
+    getPlayerSix() {
+    if ($('.player6-name').val()) {
+      var playerSix = new Player($('.player6-name').val());
+      $('.player6-ba').text(`${$('.player6-name').val()}: $`);
+    } else {
+      var playerSix = new Player('Player 6');
+    }
+    return playerSix;
+  },
+
+    getPlayerSeven() {
+    if ($('.player7-name').val()) {
+      var playerSeven = new Player($('.player7-name').val());
+      $('.player7-ba').text(`${$('.player7-name').val()}: $`);
+    } else {
+      var playerSeven = new Player('Player 7');
+    }
+    return playerSeven;
+  },
+
   clearInputs() {
     $('.player1-name').val('');
     $('.player2-name').val('');
     $('.player3-name').val('');
+    $('.player4-name').val('');
+    $('.player5-name').val('');
+    $('.player6-name').val('');
+    $('.player7-name').val('');
   },
 
   goToGameScreen() {
@@ -278,9 +326,17 @@ const domUpdates = {
     $('.player1-ba-num').text('0');
     $('.player2-ba-num').text('0');
     $('.player3-ba-num').text('0');
+    $('.player4-ba-num').text('0');
+    $('.player5-ba-num').text('0');
+    $('.player6-ba-num').text('0');
+    $('.player7-ba-num').text('0');
     $('.player1-ba').text('P1: $');
     $('.player2-ba').text('P2: $');
-    $('.player3-ba').text('P3: $')
+    $('.player3-ba').text('P3: $');
+    $('.player4-ba').text('P4: $');
+    $('.player5-ba').text('P5: $');
+    $('.player6-ba').text('P6: $');
+    $('.player7-ba').text('P7: $')
   },
 
   displayBonusIntro(winner, score) {
