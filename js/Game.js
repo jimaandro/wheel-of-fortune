@@ -39,7 +39,7 @@ class Game {
   }
 
   endTurn() {
-    this.playerIndex === 2 ? this.playerIndex = 0 : this.playerIndex++;
+    this.playerIndex === 6 ? this.playerIndex = 0 : this.playerIndex++;
     domUpdates.newPlayerTurn(this.players, this.playerIndex);
     domUpdates.disableKeyboard();
   }
